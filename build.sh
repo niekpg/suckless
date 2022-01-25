@@ -1,4 +1,3 @@
-clear
 cd
 
 # Packages
