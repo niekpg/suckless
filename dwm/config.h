@@ -131,13 +131,13 @@ static char *tagicons[][NUMTAGS] = {
  * A traditional struct table looks like this:
  *    // class      instance  title  wintype  tags mask  isfloating  monitor
  *    { "Gimp",     NULL,     NULL,  NULL,    1 << 4,    0,          -1 },
- *    { "Firefox",  NULL,     NULL,  NULL,    1 << 7,    0,          -1 },
+ *    { "librewolf",  NULL,     NULL,  NULL,    1 << 7,    0,          -1 },
  *
  * The RULE macro has the default values set for each field allowing you to only
  * specify the values that are relevant for your rule, e.g.
  *
  *    RULE(.class = "Gimp", .tags = 1 << 4)
- *    RULE(.class = "Firefox", .tags = 1 << 7)
+ *    RULE(.class = "librewolf", .tags = 1 << 7)
  *
  * Refer to the Rule struct definition for the list of available fields depending on
  * the patches you enable.
@@ -215,12 +215,12 @@ static const char *dmenucmd[] = {
 	"-sf", selfgcolor,
 	NULL
 };
-static const char *vol[]  = { "terminator", "pulsemixer", NULL };
+static const char *vol[]  = { "st", "pulsemixer", NULL };
 
 static Key keys[] = {
 	/* modifier                     key            function                argument */
 	{ MODKEY,                       XK_d,          spawn,                  {.v = dmenucmd } },
-	{ MODKEY,	                XK_Return,     spawn,                  SHCMD("terminator") },
+	{ MODKEY,	                XK_Return,     spawn,                  SHCMD("st") },
 	{ MODKEY,                       XK_b,          togglebar,              {0} },
 	{ MODKEY,                       XK_l,          focusstack,             {.i = +1 } },
 	{ MODKEY,                       XK_k,          focusstack,             {.i = -1 } },
@@ -229,11 +229,12 @@ static Key keys[] = {
 	{ MODKEY,	                XK_p,          movestack,              {.i = +1 } },
 	{ MODKEY,                       XK_o,          movestack,              {.i = -1 } },
 	{ MODKEY|ShiftMask,	        XK_c,          killclient,             {0} },
-	{ MODKEY|ShiftMask,             XK_q,          quit,                   {0} },
+	{ MODKEY|ShiftMask,             XK_p,          quit,                   {0} },
 	{ MODKEY,                       XK_space,      setlayout,              {0} },
 	{ MODKEY|ShiftMask,             XK_space,      togglefloating,         {0} },
-        { MODKEY,                       XK_w,          spawn,                  SHCMD("firefox") },
+        { MODKEY,                       XK_w,          spawn,                  SHCMD("librewolf") },
 	{ MODKEY,                       XK_e,          spawn,                  SHCMD("thunar") },
+	{ MODKEY|ShiftMask,             XK_l,          spawn,                  SHCMD("xsecurelock") },
 	{ MODKEY|ShiftMask,	        XK_f,          togglefakefullscreen,   {0} },
 	{ MODKEY,	                XK_f,          fullscreen,             {0} },
 	{ MODKEY,                       XK_0,          view,                   {.ui = ~SPTAGMASK } },
@@ -260,7 +261,7 @@ static Button buttons[] = {
 	{ ClkLtSymbol,          0,                   Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,                   Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,                   Button2,        zoom,           {0} },
-	{ ClkStatusText,        0,                   Button2,        spawn,          SHCMD("terminator") },
+	{ ClkStatusText,        0,                   Button2,        spawn,          SHCMD("st") },
 	{ ClkClientWin,         MODKEY,              Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,              Button2,        togglefloating, {0} },
 	{ ClkClientWin,         MODKEY,              Button3,        resizemouse,    {0} },
