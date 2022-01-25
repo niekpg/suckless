@@ -1,8 +1,8 @@
 clear
 cd
 
-# Install packages
-    yay -S --needed --noconfirm librewolf chromium pulsemixer thunar terminator
+# Packages
+    yay -S --needed --noconfirm librewolf chromium pulsemixer thunar terminator xorg-server xorg-xinit
 
 # Build dwm & st
     cd ~/suckless/dwm && sudo make clean install
