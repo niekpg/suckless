@@ -2,7 +2,7 @@ clear
 cd
 
 # Install packages
-    yay -S --needed --noconfirm firefox pulsemixer thunar terminator
+    yay -S --needed --noconfirm librewolf chromium pulsemixer thunar terminator
 
 # Build dwm & st
     cd ~/suckless/dwm && sudo make clean install
