@@ -1,7 +1,7 @@
 cd
 
 # Packages
-    yay -S --needed --noconfirm librewolf-bin xsecurelock chromium pulsemixer thunar terminator xorg-server xorg-xinit
+    yay -S --needed --noconfirm dmenu librewolf-bin xsecurelock chromium pulsemixer thunar terminator xorg-server xorg-xinit
 
 # Build dwm & st
     cd ~/suckless/dwm && sudo make clean install
