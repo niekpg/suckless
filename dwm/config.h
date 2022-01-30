@@ -24,32 +24,32 @@ static const char dmenufont[]            = "monospace:size=10";
 
 static char c000000[]                    = "#000000"; // placeholder value
 
-static char normfgcolor[]                = "#bbbbbb";
+static char normfgcolor[]                = "#ffffff";
 static char normbgcolor[]                = "#222222";
-static char normbordercolor[]            = "#454545";
+static char normbordercolor[]            = "#222222";
 static char normfloatcolor[]             = "#db8fd9";
 
-static char selfgcolor[]                 = "#eeeeee";
+static char selfgcolor[]                 = "#ffffff";
 static char selbgcolor[]                 = "#444444";
 static char selbordercolor[]             = "#444444";
 static char selfloatcolor[]              = "#444444";
 
-static char titlenormfgcolor[]           = "#bbbbbb";
+static char titlenormfgcolor[]           = "#ffffff";
 static char titlenormbgcolor[]           = "#222222";
 static char titlenormbordercolor[]       = "#454545";
 static char titlenormfloatcolor[]        = "#db8fd9";
 
-static char titleselfgcolor[]            = "#eeeeee";
-static char titleselbgcolor[]            = "#444444";
+static char titleselfgcolor[]            = "#ffffff";
+static char titleselbgcolor[]            = "#222222";
 static char titleselbordercolor[]        = "#444444";
 static char titleselfloatcolor[]         = "#444444";
 
-static char tagsnormfgcolor[]            = "#bbbbbb";
+static char tagsnormfgcolor[]            = "#ffffff";
 static char tagsnormbgcolor[]            = "#222222";
 static char tagsnormbordercolor[]        = "#454545";
 static char tagsnormfloatcolor[]         = "#db8fd9";
 
-static char tagsselfgcolor[]             = "#eeeeee";
+static char tagsselfgcolor[]             = "#ffffff";
 static char tagsselbgcolor[]             = "#444444";
 static char tagsselbordercolor[]         = "#444444";
 static char tagsselfloatcolor[]          = "#444444";
@@ -59,7 +59,7 @@ static char hidselfgcolor[]              = "#227799";
 static char hidnormbgcolor[]             = "#222222";
 static char hidselbgcolor[]              = "#222222";
 
-static char urgfgcolor[]                 = "#bbbbbb";
+static char urgfgcolor[]                 = "#ffffff";
 static char urgbgcolor[]                 = "#222222";
 static char urgbordercolor[]             = "#ff0000";
 static char urgfloatcolor[]              = "#db8fd9";
@@ -183,9 +183,9 @@ static const int resizehints = 0;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	{ " []=",      tile },    /* first entry is default */
+	{ " ><>",      NULL },    /* no layout function means floating behavior */
+	{ " [M]",      monocle },
 	{ NULL,       NULL },
 };
 
