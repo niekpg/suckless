@@ -10,5 +10,5 @@ cd
     cd ~/suckless/dwm4void && sudo make clean install
     cd ~/suckless/st4void && sudo make clean install
 
-# Import .xinitrc
-    mv ~/suckless/xinitrc ~/.xinitrc
+# Copy .xinitrc
+    cp /etc/X11/xinit/xinitrc ~/.xinitrc
