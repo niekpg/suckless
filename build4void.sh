@@ -11,4 +11,4 @@ cd
     cd ~/suckless/st4void && sudo make clean install
 
 # Copy .xinitrc
-    cp /etc/X11/xinit/xinitrc ~/.xinitrc
+    mv ~/suckless/xinitrc ~/.xinitrc
