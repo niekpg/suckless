@@ -14,4 +14,4 @@ cd
     mv ~/suckless/xinitrc ~/.xinitrc
 
 # Copy x11 config
-    mv ~/suckless/xorg.conf /etc/X11/xorg.conf 
+    sudo mv ~/suckless/xorg.conf /etc/X11/xorg.conf 
